@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de inicio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <header>
+  <nav>
+    
+      <a href="index.html">Inicio</a>
+      <a href="Vision.html">Visión</a>
+      <a href="Mision.html">Misión</a>
+      <a href="Quienessomos.html">¿Quienes somos?</a>
+      <a href="contactanos.html">Contáctanos</a>
+      <a href="Servicios.html">Servicios</a>
+      <a href="nuestrosproductos.html">Nuestros Productos</a>
+      <a href="formulario.html">Formulario</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="proximamente.html">Próximamente</a>
+  </nav>
+</header>
+
+  <form id="miFormulario">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="correo" placeholder="Tu correo" required>
+  <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="mensajeGracias" style="display:none; border: 1px solid #4CAF50; padding: 10px; margin-top: 10px; background-color: #dff0d8; color: #3c763d;">
+  ¡Gracias por su respuesta!
+</div>
+
+<script>
+  const form = document.getElementById('miFormulario');
+  const mensaje = document.getElementById('mensajeGracias');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe y recargue la página
+    mensaje.style.display = 'block'; // Muestra el mensaje de agradecimiento
+    form.reset(); // Limpia los campos del formulario
+  });
+</script>
+
+   

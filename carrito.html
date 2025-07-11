@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de inicio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Vision.html">Visión</a>
+    <a href="Mision.html">Misión</a>
+    <a href="Quienessomos.html">¿Quienes somos?</a>
+    <a href="contactanos.html">Contáctanos</a>
+    <a href="Servicios.html">Servicios</a>
+    <a href="nuestrosproductos.html">Nuestros Productos</a>
+    <a href="formulario.html">Formulario</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="proximamente.html">Próximamente</a>
+  </nav>
+</header>
+
+<section class="productos">
+  <h2>Nuestros Productos son de buena calidad y totalmente seguros para garantizar la vida de tus peces.</h2>
+
+  <div class="producto">
+    <img src="imagen13.jpg" alt="Coral Exótico" width="150">
+    <h3>Coral Exótico</h3>
+    <p>Q35.00</p>
+    <button onclick="agregarAlCarrito('Coral Exótico', 35)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="imagen14.jpg" alt="Filtro de Acuario" width="150">
+    <h3>Filtro de Acuario</h3>
+    <p>Q35.00</p>
+    <button onclick="agregarAlCarrito('Filtro de Acuario', 35)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="imagen15.jpg" alt="Pecera de Vidrio 60L" width="150">
+    <h3>Pecera de Vidrio 60L</h3>
+    <p>Q160.00</p>
+    <button onclick="agregarAlCarrito('Pecera de Vidrio 60L', 160)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="imagen16.jpg" alt="Sal Marina para Acuarios" width="150">
+    <h3>Sal Marina para Acuarios</h3>
+    <p>Q18.50</p>
+    <button onclick="agregarAlCarrito('Sal Marina para Acuarios', 18.50)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="imagen17.jpg" alt="Decoración de Coral Artificial" width="150">
+    <h3>Decoración de Coral Artificial</h3>
+    <p>Q10.00</p>
+    <button onclick="agregarAlCarrito('Decoración de Coral Artificial', 10.00)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <img src="imagen18.jpg" alt="Iluminación LED Sumergible" width="150">
+    <h3>Iluminación LED Sumergible</h3>
+    <p>Q50.00</p>
+    <button onclick="agregarAlCarrito('Iluminación LED Sumergible', 50.00)">Agregar al carrito</button>
+  </div>
+  <div class="producto">
+    <img src="imagen31.jpg" alt="Cíclidos Loro" width="150">
+    <h3>Cíclidos Loro</h3>
+    <p>Q30.00</p>
+    <button onclick="agregarAlCarrito('Cíclidos Loro', 30.00)">Agregar al carrito</button>
+  </div>
+    <div class="producto">
+    <img src="imagen30.jpg" alt="Ramirezi Mariposa" width="150">
+    <h3>Ramirezi Mariposa</h3>
+    <p>Q35.00</p>
+    <button onclick="agregarAlCarrito('Ramirezi Mariposa', 35.00)">Agregar al carrito</button>
+  </div>
+  
+  <div class="producto">
+    <img src="imagen29.jpg" alt="Discos" width="150">
+    <h3>Discos</h3>
+    <p>Q25.00</p>
+    <button onclick="agregarAlCarrito('Discos', 25.00)">Agregar al carrito</button>
+  </div>
+  <div class="producto">
+    <img src="imagen28.jpg" alt="Pez Arcoíris de Boeseman" width="150">
+    <h3>Pez Arcoíris de Boeseman</h3>
+    <p>Q45.00</p>
+    <button onclick="agregarAlCarrito('Pez Arcoíris de Boeseman', 45.00)">Agregar al carrito</button>
+  </div>
+  <div class="producto">
+    <img src="imagen27.jpg" alt="Gurami Enano Azul" width="150">
+    <h3>Gurami Enano Azul</h3>
+    <p>Q40.00</p>
+    <button onclick="agregarAlCarrito('Gurami Enano Azul', 40.00)">Agregar al carrito</button>
+  </div>
+<div class="producto">
+    <img src="imagen1.jpg" alt="Pez Payaso" width="150">
+    <h3>Pez Payaso</h3>
+    <p>Q30.00</p>
+    <button onclick="agregarAlCarrito('Pez Payaso', 30)">Agregar al carrito</button>
+  </div>
+</section>
+
+ <section class="carrito">
+  <h2>Carrito de Compras</h2>
+  <ul id="lista-carrito"></ul>
+  <p>Total: Q<span id="total">0.00</span></p>
+
+<label for="agradecer" class="btn-finalizar">
+  Finalizar compra
+</label>
+
+<!-- Checkbox oculto que controla el modal -->
+<input type="checkbox" id="agradecer" hidden>
+
+<div class="modal">
+  <div class="modal-content">
+    <h2>¡Gracias por tu compra!</h2>
+    <p>Tu pedido ha sido procesado con éxito.</p>
+    <label for="agradecer" class="close-btn">Cerrar</label>
+  </div>
+</div>
+
+</section>
+</body>
+</html>
+
+<script>
+  let carrito = [];
+  let total = 0;
+
+  function agregarAlCarrito(producto, precio) {
+    carrito.push({ producto, precio });
+    total += precio;
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById("lista-carrito");
+    const totalElemento = document.getElementById("total");
+
+    lista.innerHTML = ""; // Limpiar lista
+    carrito.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.producto} - Q${item.precio.toFixed(2)} `;
+      
+      const btnEliminar = document.createElement("button");
+      btnEliminar.textContent = "Eliminar";
+      btnEliminar.style.marginLeft = "10px";
+      btnEliminar.onclick = () => eliminarDelCarrito(index);
+      li.appendChild(btnEliminar);
+
+      lista.appendChild(li);
+    });
+
+    totalElemento.textContent = total.toFixed(2);
+  }
+
+  function eliminarDelCarrito(index) {
+    total -= carrito[index].precio;
+    carrito.splice(index, 1);
+    actualizarCarrito();
+  }
+</script>
+
+</script>
+
+<script>
+  let carrito = [];
+  let total = 0;
+
+  function agregarAlCarrito(producto, precio) {
+    carrito.push({ producto, precio });
+    total += precio;
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById("lista-carrito");
+    const totalElemento = document.getElementById("total");
+
+    lista.innerHTML = ""; // Limpiar lista
+    carrito.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.producto} - $${item.precio.toFixed(2)} `;
+      
+      const btnEliminar = document.createElement("button");
+      btnEliminar.textContent = "Eliminar";
+      btnEliminar.style.marginLeft = "10px";
+      btnEliminar.onclick = () => eliminarDelCarrito(index);
+      li.appendChild(btnEliminar);
+
+      lista.appendChild(li);
+    });
+
+    totalElemento.textContent = total.toFixed(2);
+  }
+
+  function eliminarDelCarrito(index) {
+  
+ 
+    total -= carrito[index].precio;
+    carrito.splice(index, 1);
+    actualizarCarrito();
+
+</script>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+     
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color:  #ffffff; /* <== AQUÍ CAMBIAMOS A TEXTO BLANCO */
+    }
+
+    nav {
+      background-color: #00778B;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .who-weare {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5); /* opcional: fondo semitransparente para que se lea mejor */
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    p {
+      color:  #ffffff;
+      line-height: 1.6;
+    }
+  </style>
