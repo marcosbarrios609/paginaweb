@@ -1,0 +1,438 @@
+nav{
+  text-align: center;
+  border-radius: 10px;
+  font-family: Arial;
+  margin-top: 20px;
+  margin-inline: 20px;
+  color:    black;
+  background-color: white;
+}
+.who-weare{
+  text-align: justify;
+  font-family: sans-serif;
+}
+h1{
+  text-align: center;
+} 
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 16px;
+
+}h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #007c91;
+  font-size: 24px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  width: 100%;
+  background-color: #007c91;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #005e6b;
+}
+ 
+.productos {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.producto button {
+  background-color: #007c91;
+  color:   black;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: #005e6b;
+}
+
+.carrito {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color:   #000000;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito li {
+  margin-bottom: 10px;
+}
+
+#finalizarCompra {
+  background-color: #28a745;
+  color: black;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#finalizarCompra:hover {
+  background-color: #218838;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      background-color: #007c91;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color:  black;
+      text-decoration: none;
+      margin: 8px 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #inicio {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #inicio h1 {
+      font-size: 28px;
+      color:  white;
+      margin-bottom: 30px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+
+header nav {
+  background-color: #00778B;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+header nav a {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section.productos {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.productos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.producto {
+  background-color: black;
+  border-radius: 15px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+}
+
+.producto img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 1em;
+  color:   #ffffff;
+  margin-bottom: 15px;
+}
+
+.producto button {
+  background-color:   #00778B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #005a66;
+}
+
+section.carrito {
+  background-color: black;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.carrito h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section.carrito button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  margin-top: 10px;
+  background-color: #00778B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+section.carrito button:hover {
+  background-color: black;
+}
+
+/* Responsive: para que los productos se acomoden en grilla en pantallas grandes */
+@media (min-width: 768px) {
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("fondo.jpg"); /* Cambia el nombre de archivo */
+  background-size: cover;     /* Ajusta la imagen para cubrir toda la pantalla */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* El fondo se queda fijo al hacer scroll */
+  background-position: center;
+}
+
+
+form#miFormulario {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campos de texto y textarea */
+form#miFormulario input[type="text"],
+form#miFormulario input[type="email"],
+form#miFormulario textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  box-sizing: border-box; /* Para que el padding no aumente el ancho */
+}
+
+form#miFormulario input[type="text"]:focus,
+form#miFormulario input[type="email"]:focus,
+form#miFormulario textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Contenedor para centrar el botón */
+form#miFormulario .boton-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* Botón enviar */
+form#miFormulario button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+form#miFormulario button:hover {
+  background-color: #45a049;
+}
+#mensajeGracias {
+  max-width: 600px;          /* Más ancho para que sea más grande */
+  margin: 30px auto;         /* Centrado con más espacio arriba y abajo */
+  padding: 25px 30px;        /* Más espacio interno para hacerlo más grande */
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+  color: #155724;
+  border-radius: 12px;
+  font-size: 24px;           /* Texto más grande */
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  background: #fff;
+}
